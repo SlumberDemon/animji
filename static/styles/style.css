@@ -1,0 +1,68 @@
+body {
+    background: radial-gradient(#a5a5a5 1px, transparent 1px);
+    font-family: "Open Sans", sans-serif;
+    background-size: 40px 40px;
+    flex-direction: column;
+    overflow: hidden;
+    color: black;
+    display: flex;
+    margin: 0px;
+}
+
+/* Main */
+
+.banner {
+    align-self: center;
+    margin-top: 10px;
+    height: 150px;
+    width: 450px;
+}
+
+.squares {
+    align-self: center;
+    flex-direction: row;
+    display: flex;
+    gap: 4px;
+}
+
+.square {
+    position: relative;
+    text-align: center;
+    color: #4D3F73;
+    cursor: pointer;
+    transition: 2s;
+    margin: 20px;
+}
+
+.square:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.square-img {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: 2s;
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+}
+
+/* Devices */
+
+@media (max-width: 600px) {
+    .banner {
+        height: 150px !important;
+        width: 350px !important;
+    }
+}
+
+/*
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+*/
