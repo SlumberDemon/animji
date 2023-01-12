@@ -3,7 +3,6 @@ body {
     font-family: "Open Sans", sans-serif;
     background-size: 40px 40px;
     flex-direction: column;
-    overflow: hidden;
     color: black;
     display: flex;
     margin: 0px;
@@ -11,16 +10,34 @@ body {
 
 /* Main */
 
+.main {
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+
 .banner {
     align-self: center;
     margin-top: 10px;
+    transition: 2s;
     height: 150px;
     width: 450px;
 }
 
-.squares {
+.projects {
     align-self: center;
+    margin-top: 10px;
+    transition: 2s;
+    height: 50px;
+    width: 250px;
+}
+
+/* Elements */
+
+.squares {
     flex-direction: row;
+    align-self: center;
     display: flex;
     gap: 4px;
 }
@@ -39,14 +56,29 @@ body {
     transition: 1s;
 }
 
+.square::after {
+    transition: 2s;
+}
+
 .square-img {
     transform: translate(-50%, -50%);
     position: absolute;
-    transition: 2s;
     height: 50px;
     width: 50px;
     left: 50%;
     top: 50%;
+}
+
+.rectangles {
+    grid-template-columns: auto auto;
+    display: grid;
+    gap: 4px;
+}
+
+.rectangle {
+    height: 150px;
+    /* margin: 10px; */
+    width: 300px;
 }
 
 /* Devices */
@@ -55,6 +87,15 @@ body {
     .banner {
         height: 150px !important;
         width: 350px !important;
+    }
+    .rectangles {
+        grid-template-columns: auto !important;
+    }
+    .rectangle {
+        margin: 5px;
+    }
+    .banner {
+        margin-top: 200px !important;
     }
 }
 
