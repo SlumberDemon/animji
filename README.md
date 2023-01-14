@@ -5,3 +5,6 @@ Animji Interactive
 
 ## Preview
 ![Preview](/static/images/preview.png)
+
+## Projects
+- [Novel](https://novel.deta.dev) - Browse trending books
