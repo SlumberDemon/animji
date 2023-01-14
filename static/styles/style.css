@@ -13,8 +13,9 @@ body {
 .main {
     transform: translateX(-50%) translateY(-50%);
     position: absolute;
-    top: 40%;
+    transition: 2s;
     left: 50%;
+    top: 40%;
 }
 
 .banner {
@@ -26,8 +27,9 @@ body {
 }
 
 .projects {
+    margin-bottom: 5px;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 20px;
     transition: 2s;
     height: 50px;
     width: 250px;
@@ -38,6 +40,7 @@ body {
 .squares {
     flex-direction: row;
     align-self: center;
+    transition: 2s;
     display: flex;
     gap: 4px;
 }
@@ -70,16 +73,76 @@ body {
 }
 
 .rectangles {
+    /*
+    flex-direction: row;
+    align-self: center;
+    transition: 2s;
+    display: flex;
+    gap: 4px;
+    */
+    grid-template-columns: auto auto auto auto auto auto;
+    display: grid;
+    gap: 2px;
+}
+
+/* Tooltip */
+
+.square {
+    display: inline-block;
+    position: relative;
+    z-index: 10 !important;
+}
+
+
+.square .tip {
+    background-color: #4D3F73;
+    backdrop-filter: blur(10px);
+    margin-left: -60px;
+    position: absolute;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px 0;
+    color: #fff;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    display: none;
+
+    /* existing CSS */
+    z-index: 999; /* or any large value */
+}
+  
+.square:hover .tip {
+    display: block;
+}
+
+/*
+
+.rectangles {
     grid-template-columns: auto auto;
     display: grid;
     gap: 4px;
 }
 
 .rectangle {
-    height: 150px;
-    /* margin: 10px; */
-    width: 300px;
+    margin: 40px !important;;
+    color: #4D3F73;
 }
+
+.rectangle-text {
+    font-size: 20px;
+    color: #4D3F73;
+}
+.rectangle-img {
+    transform: translate(-50%, -30%);
+    position: absolute;
+    height: 150px;
+    width: 300px;
+    left: 25%;
+}
+
+*/
 
 /* Devices */
 
@@ -89,7 +152,7 @@ body {
         width: 350px !important;
     }
     .rectangles {
-        grid-template-columns: auto !important;
+        grid-template-columns: auto auto auto !important;
     }
     .rectangle {
         margin: 5px;
